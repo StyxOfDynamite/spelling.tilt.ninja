@@ -8,12 +8,13 @@ body {
     background-color: antiquewhite;
     font-family: 'Muli', 'sans-serif';
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: 0;
     padding: 1rem;
 }
-
+section {
+    flex: 50%;
+}
 .container {
     display: flex;
 }
@@ -23,7 +24,7 @@ body {
 }
 
 .word {
-    margin: 2rem;
+    margin: 1rem 2rem;
     padding-bottom: 1rem;
 }
 
