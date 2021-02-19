@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'sans-serif';
+    background-color: #f6fff6;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.content-container {
+    background-color: #f6fff6;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-section .content-container {
+    transform: translateX(40%);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 100;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-section .circle-container .circle {
+    transform: rotate(-90deg);
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-section + section {
+    transform: translateX(0%);
+    transition-delay: 0.3s;
+}
+
+section {
+    position: fixed;
+    top: 5rem;
+    left: 2rem;
+    z-index: 150;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-200%);
+    transition: transform 0.4s ease-in;
+}
+
+section div {
+    padding: 1rem;
+}
+
+.form-control input {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 12px 10px;
+    height: 50px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.word {
+    margin: 2rem;
+}
+
+.letter-underline {
+    padding: 1rem;
+    border-bottom: #222 solid 1px;
+    margin: 0.2rem;
+}
+
+#word-list {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}

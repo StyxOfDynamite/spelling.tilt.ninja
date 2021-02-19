@@ -28,7 +28,7 @@ const isHanging = (letter) => {
 };
 
 const isTall = (letter) => {
-    return ['t', 'd', 'h', 'l', 'b'].includes(letter);
+    return ['f', 't', 'd', 'h', 'l', 'b'].includes(letter);
 };
 
 const addWords = (words) => {
