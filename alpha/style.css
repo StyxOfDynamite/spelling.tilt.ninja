@@ -82,7 +82,7 @@ section {
     left: 2rem;
     z-index: 150;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
     margin: 40px 0;
     transform: translateX(-200%);
     transition: transform 0.4s ease-in;
